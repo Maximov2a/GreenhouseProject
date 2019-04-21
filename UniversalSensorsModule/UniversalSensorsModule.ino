@@ -1132,6 +1132,8 @@ void ReadChinaSoilMoistureMeter(const SensorSettings& sett, void* sensorDefinedD
    int soilMoisture0Percent = map(scratchpadS.calibration_factor1,0,255,0,1023);
    int soilMoisture100Percent = map(scratchpadS.calibration_factor2,0,255,0,1023);
 
+   val = constrain(val,min(soilMoisture0Percent,soilMoisture100Percent),max(soilMoisture0Percent,soilMoisture100Percent));
+
    int percentsInterval = map(val,min(soilMoisture0Percent,soilMoisture100Percent),max(soilMoisture0Percent,soilMoisture100Percent),0,10000);
    
   // теперь, если у нас значение 0% влажности больше, чем значение 100% влажности - надо от 10000 отнять полученное значение
