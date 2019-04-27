@@ -462,6 +462,14 @@ void initSensors()
         sensors[i].data = ds;
         ds->begin(sensors[i].param1);
         ds->setResolution((DS18B20Resolution) sensors[i].param2);
+
+         DSSensorType st = DS18B20;
+         if(sensors[i].type == sensor_DS18S20)
+          st = DS18S20;
+
+         DS18B20Temperature t;
+         ds->readTemperature(&t,st);
+         myDelay(800);
         
         #ifdef _DEBUG
           Serial.print(F("DS18*20 inited on pin "));
