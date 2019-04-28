@@ -256,11 +256,23 @@ function showUptime()
   var c_hours = parseInt(mins/60);
   var c_minutes = mins%60;
   
-  
   if(c_minutes < 10)
-    c_minutes = '0' + c_minutes;
+    c_minutes = '0' + c_minutes;  
+
+  var c_days = '';
   
-  $('#controller_uptime').html(c_hours + ' ч ' + c_minutes + ' мин');
+  if(c_hours > 24)
+  {
+	  var daysElapsed = parseInt(c_hours/24);
+	  c_hours -= daysElapsed*24;
+	  
+	  c_days = daysElapsed + ' д ';
+  }
+  
+  var uptimeCaption = c_days + c_hours + ' ч ' + c_minutes + ' мин';
+  
+  
+  $('#controller_uptime').html(uptimeCaption);
 }
 //-----------------------------------------------------------------------------------------------------
 function upTime()
