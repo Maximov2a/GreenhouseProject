@@ -261,7 +261,7 @@ function showUptime()
 
   var c_days = '';
   
-  if(c_hours > 24)
+  if(c_hours >= 24)
   {
 	  var daysElapsed = parseInt(c_hours/24);
 	  c_hours -= daysElapsed*24;
