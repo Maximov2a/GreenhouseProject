@@ -387,7 +387,8 @@
             
           <div id='rule_index_box' class='button_menu_spacer hdn'>
             <div id='rule_sensor_index_description'>Индекс датчика:</div>
-            <select id='rule_sensor_index_input' style='width:100%;'></select>
+            <!--select id='rule_sensor_index_input' style='width:100%;'></select-->
+			 <input type='text' id='rule_sensor_index_input' class='hdn' style='width:100%' maxlength='3'/>
             <input type='text' id='rule_pin_number' class='hdn' style='width:100%' maxlength='2'/>
           </div>
           

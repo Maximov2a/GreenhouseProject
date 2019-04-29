@@ -3082,7 +3082,7 @@ $(document).ready(function(){
   });
   
   $('#rule_module_select').change(function(){
-  
+  /*
     var moduleName = $(this).val();
     if(moduleName == null) // ничего не надо заполнять
       return;
@@ -3118,7 +3118,7 @@ $(document).ready(function(){
       {
         $('<option/>',{value: i}).text(controller.SensorsNames.getMnemonicName(new Sensor(i,moduleName))).appendTo('#rule_sensor_index_input');
       }
-          
+    */      
   
   });
   
@@ -3259,7 +3259,7 @@ $(document).ready(function(){
     $("#statsmssensor1, #statsmssensor2").spinner({min: -1, max: 100});
 
     
-    $('#iot_interval, #cc_param, #flow_calibraton1, #flow_calibraton2, #rule_pin_number, #timerPin1, #timerPin2, #timerPin3, #timerPin4, #timerOnMin1, #timerOnMin2, #timerOnMin3, #timerOnMin4, #timerOnSec1, #timerOnSec2, #timerOnSec3, #timerOnSec4, #timerOffMin1, #timerOffMin2, #timerOffMin3, #timerOffMin4, #timerOffSec1, #timerOffSec2, #timerOffSec3, #timerOffSec4, #rule_wnd_interval_input').forceNumericOnly();     
+    $('#iot_interval, #cc_param, #flow_calibraton1, #flow_calibraton2, #rule_pin_number, #timerPin1, #timerPin2, #timerPin3, #timerPin4, #timerOnMin1, #timerOnMin2, #timerOnMin3, #timerOnMin4, #timerOnSec1, #timerOnSec2, #timerOnSec3, #timerOnSec4, #timerOffMin1, #timerOffMin2, #timerOffMin3, #timerOffMin4, #timerOffSec1, #timerOffSec2, #timerOffSec3, #timerOffSec4, #rule_wnd_interval_input, #rule_sensor_index_input').forceNumericOnly();     
 
     $('#all_watering_start_hour, #all_watering_start_minute, #all_watering_time, #ph_calibraton, #ph4Voltage, #ph7Voltage, #ph10Voltage, #phTemperatureSensor, #phCalibrationTemperature, #phTarget, #phHisteresis, #phMixPumpTime, #phReagentPumpTime').forceNumericOnly();
     $('#watering_start_hour, #watering_start_minute, #watering_time, #watering_sensor_index, #watering_stop_border, #all_watering_sensor_index, #all_watering_stop_border').forceNumericOnly(); 
