@@ -107,7 +107,18 @@ typedef struct
 #define MEASURE_MIN_TIME 1000 // через сколько минимум можно читать с датчиков после запуска конвертации
 //----------------------------------------------------------------------------------------------------------------
 enum {RS485FromMaster = 1, RS485FromSlave = 2};
-enum {RS485ControllerStatePacket = 1, RS485SensorDataPacket = 2};
+enum 
+{
+  RS485ControllerStatePacket = 1, 
+  RS485SensorDataPacket = 2, 
+  RS485WindowsPositionPacket = 3,
+  RS485RequestCommandsPacket = 4,
+  RS485CommandsToExecuteReceipt = 5,
+  RS485SensorDataForRemoteDisplay = 6,
+  RS485SettingsForRemoteDisplay = 7,
+  RS485WindRainData = 8, // запрос данных по дождю, скорости, направлению ветра
+  RS485SunControllerData = 9, // пакет с данными контроллера солнечной установки
+};
 //----------------------------------------------------------------------------------------------------------------
 #pragma pack(push,1)
 typedef struct
