@@ -1485,7 +1485,6 @@ int serial_putc( char c, FILE * ) {
 
 void printf_begin(void) {
   fdevopen( &serial_putc, 0 );
-  Serial.begin(57600);
   Serial.println(F("Init nRF..."));
 }
 #endif
